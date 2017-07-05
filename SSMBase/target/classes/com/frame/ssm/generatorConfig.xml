@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<classPathEntry location="D:\MavenRepository\mysql\mysql-connector-java\5.1.39\mysql-connector-java-5.1.39.jar" />
+
+	<context id="context1">
+
+		<commentGenerator type="com.frame.ssm.MyCommentGenerator">
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" />
+			<property name="encoding" value="utf-8" />
+		</commentGenerator>
+
+		<jdbcConnection connectionURL="jdbc:mysql://10.1.102.155:3306/gxyj-payment"
+			driverClass="com.mysql.jdbc.Driver" password="i2f-gxyj155" userId="root" />
+
+		<javaModelGenerator targetPackage="com.frame.ssm.pojo"
+			targetProject="SSMBase" />
+
+		<sqlMapGenerator targetPackage="com.frame.ssm.dao"
+			targetProject="SSMBase" />
+
+		<javaClientGenerator targetPackage="com.frame.ssm.mapping"
+			targetProject="SSMBase" type="XMLMAPPER" />
+		<!--XMLMAPPER, ANNOTATEDMAPPER -->
+
+		<table schema="gxyj-payment" tableName="user_t"
+			domainObjectName="User" enableSelectByExample="false"
+			enableDeleteByExample="false" enableCountByExample="false"
+			enableUpdateByExample="false" selectByExampleQueryId="false" />
+
+	</context>
+</generatorConfiguration>

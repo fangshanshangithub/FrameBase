@@ -1,0 +1,1 @@
+SSMBase项目是基于Spring+SpringMVC+MyBatis 的开发框架项目
